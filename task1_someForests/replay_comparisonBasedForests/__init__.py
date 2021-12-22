@@ -6,7 +6,7 @@ import predict
 
 allData = predeal.getDataSet('../dataset/boston_housing_data.csv',',',False)
 trainData,testData = predeal.loadTrainAndTest(allData,10)
-print(str(trainData.shape)+"  "+str(testData.shape))
+# print(str(trainData.shape)+"  "+str(testData.shape))
 
 # Tree = ct.createTree(trainData)
 # print("tree is constructed!")
@@ -20,4 +20,3 @@ for i in range(10):
         # print(str(data[-1])+" 预测值："+str(res))
         err+=np.abs(res-data[-1])
     print("平均误差："+str(err/testData.shape[0]))
-
